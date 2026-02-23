@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — AROMA Luxury Perfume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav light-nav">
+  <div class="nav-logo">A<span>r</span>oma</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html" class="active">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <button class="nav-icon" id="cartIcon" title="Cart">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <span class="cart-badge"></span>
+    </button>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-label">Our Collection</div>
+  <h1>The <em>Atelier</em></h1>
+  <p>Explore our full range of handcrafted luxury fragrances</p>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <span>Shop</span>
+  </div>
+</div>
+
+<!-- SHOP -->
+<section class="shop-layout">
+  <div class="container">
+
+    <!-- Filters -->
+    <div class="filter-bar">
+      <span class="filter-label">Filter by:</span>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="floral">Floral</button>
+      <button class="filter-btn" data-filter="oriental">Oriental</button>
+      <button class="filter-btn" data-filter="woody">Woody</button>
+      <button class="filter-btn" data-filter="fresh">Fresh</button>
+      <button class="filter-btn" data-filter="aquatic">Aquatic</button>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="shop-toolbar">
+      <div class="shop-count" id="shopCount">Loading...</div>
+      <div class="shop-sort">
+        <span>Sort by:</span>
+        <select id="shopSort">
+          <option value="default">Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="shop-grid" id="shopGrid">
+      <!-- JS Populated -->
+    </div>
+
+    <!-- Load More -->
+    <div class="load-more-wrap">
+      <button class="btn-outline" onclick="showToast('All products are shown')">Load More</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section style="background:var(--bg-secondary);padding:80px 0;text-align:center;">
+  <div class="container">
+    <div class="section-label">Personalized Service</div>
+    <h2 class="section-title" style="margin-bottom:16px;">Not Sure Which <em>Scent</em>?</h2>
+    <p style="color:var(--text-secondary);max-width:480px;margin:0 auto 36px;line-height:1.8;font-size:0.95rem;">Our fragrance consultants are here to guide you toward your perfect match. Contact us for a personalized recommendation.</p>
+    <a href="contact.html" class="btn-dark">Get Personalized Advice</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">A<span>r</span>oma</div>
+        <p class="footer-brand-desc">The House of Aroma crafts exceptional fragrances for those who appreciate the finer things in life.</p>
+        <div class="footer-social">
+          <a href="#">IG</a><a href="#">TW</a><a href="#">FB</a><a href="#">PT</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Collections</h5>
+        <ul>
+          <li><a href="#">Oriental</a></li>
+          <li><a href="#">Floral</a></li>
+          <li><a href="#">Aquatic</a></li>
+          <li><a href="#">Woody</a></li>
+          <li><a href="#">Limited Edition</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h5>Newsletter</h5>
+        <p>Exclusive launches and fragrance insights delivered to your inbox.</p>
+        <div class="footer-newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <button onclick="showToast('Subscribed!')">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Aroma Luxury Perfume House. All rights reserved.</p>
+      <p>Privacy Policy · Terms of Service</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<!-- ═══════════════════════════════════════════ -->
+<!-- ADD THIS TO HTML — Aroma Chatbot Widget   -->
+<!-- ═══════════════════════════════════════════ -->
+
+<!-- Chatbot Trigger Button -->
+<div class="aroma-chat-trigger" id="aromaChatTrigger">
+  <div class="aroma-chat-trigger-inner">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+    <span>Fragrance Advisor</span>
+  </div>
+</div>
+
+<!-- Chatbot Panel -->
+<div class="aroma-chat-panel" id="aromaChatPanel">
+
+  <!-- Header -->
+  <div class="aroma-chat-header">
+    <div class="aroma-chat-header-info">
+      <div class="aroma-chat-avatar">A</div>
+      <div>
+        <div class="aroma-chat-name">Aroma Advisor</div>
+        <div class="aroma-chat-status">
+          <span class="aroma-status-dot"></span>Online
+        </div>
+      </div>
+    </div>
+    <button class="aroma-chat-close" id="aromaChatClose">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Messages Area -->
+  <div class="aroma-chat-messages" id="aromaChatMessages"></div>
+
+  <!-- Input Area -->
+  <div class="aroma-chat-input-wrap">
+    <input type="text" id="aromaChatInput"
+           class="aroma-chat-input"
+           placeholder="Ask about fragrances..."
+           maxlength="200" />
+    <button class="aroma-chat-send" id="aromaChatSend">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- END HTML ADDITION                         -->
+<!-- ═══════════════════════════════════════════ -->
+
+<script src="backend-integration.js"></script>
+</body>
+</html>
